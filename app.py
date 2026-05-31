@@ -141,7 +141,7 @@ section[data-testid="stSidebar"] .stButton>button{
 @st.cache_data
 def load_data():
     base = os.path.dirname(os.path.abspath(__file__))
-    path = os.path.join(base, "..", "data", "E0.csv")
+    path = "E0.csv"
     df = pd.read_csv(path, encoding="utf-8", low_memory=False)
     df["Date"] = pd.to_datetime(df["Date"], dayfirst=True, errors="coerce")
     df["TotalGoals"] = df["FTHG"].fillna(0) + df["FTAG"].fillna(0)
